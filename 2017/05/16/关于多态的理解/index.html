@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>关于多态的理解 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
+<meta name="keywords" content="Java,多态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于多态的理解">
+<meta property="og:url" content="http://yoursite.com/2017/05/16/关于多态的理解/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
+<meta property="og:updated_time" content="2017-05-16T12:19:35.979Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于多态的理解">
+<meta name="twitter:description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-关于多态的理解" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/16/关于多态的理解/" class="article-date">
+  <time datetime="2017-05-16T12:17:47.000Z" itemprop="datePublished">2017-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于多态的理解
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>举个简单的例子<br>好好体会体会……</p>
+<p>假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> Wing wing;<span class="comment">//属性：翅膀</span></div><div class="line">    <span class="comment">//方法：鸣叫</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"鸟的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>鸟类封装了属性翅膀和鸣叫的方法。<br>另外两个类都继承并重写了moo方法，分别是鹦鹉和麻雀。</p>
+<p>鹦鹉类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parrot</span> <span class="keyword">extends</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"鹦鹉的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>麻雀类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sparrow</span> <span class="keyword">extends</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"麻雀的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这两个子类分别重写了鸟类的moo()方法<br>这个时候，有个女人想听鸟的叫声。<br>于是有个Women类，听鸟叫是Women的方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Women</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">()</span></span>&#123;</div><div class="line">        bird.moo();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>假设现在，这个女人想听麻雀的叫声，你就必须在listen()写：<br><code>Sparrow.moo();</code><br>如果这个女的想听鹦鹉的叫声，你也要在listen()写：<br><code>Parrot.moo();</code><br>这要实现起来非常麻烦，必须为每个鸟类单独写一个moo()方法放在listen()方法中。</p>
+<p>要是有多态就简单许多，这个女人不是想听鸟叫吗，直接把鸟扔给她，然后让鸟叫。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">(Bird bird)</span></span>&#123;</div><div class="line">    bird.moo();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>多态实现了动态的绑定</strong><br>无论今后Women想听什么鸟的叫声，只需要新增相应的鸟类，不需要修改Women类的方法。总的来说，多态让程序有了更好的拓展性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/16/关于多态的理解/" data-id="cj2rj09yk0001nkxqzcebdon9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多态/">多态</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多态/">多态</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/多态/" style="font-size: 10px;">多态</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/16/关于多态的理解/">关于多态的理解</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
