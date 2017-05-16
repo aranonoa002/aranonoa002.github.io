@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="1,2," />
+  <meta name="keywords" content="1,2,3," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
-<meta name="keywords" content="1,2">
+<meta name="description" content="这几天开发的过程中遇到路径相关的问题，具体的讲包括js和css加载不出来，调试之后发现根本没有调用到，应该是路径的问题；还有一些是前后端交互的一些路径问题，在此做个总结，希望有所帮助。  相对路径和绝对路径的概念 绝对路径：url地址以“/”开头 相对路径：url地址不以“/”开头  根目录有个项目noa1,项目下有login.html。如果想要访问login页面，则浏览器的地址是：http://">
+<meta name="keywords" content="1,2,3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于多态的理解">
-<meta property="og:url" content="http://yoursite.com/2017/05/16/关于多态的理解/index.html">
+<meta property="og:title" content="JavaWeb路径问题总结">
+<meta property="og:url" content="http://yoursite.com/2017/05/17/JavaWeb路径问题总结/index.html">
 <meta property="og:site_name" content="Forever">
-<meta property="og:description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
-<meta property="og:updated_time" content="2017-05-16T15:06:47.697Z">
+<meta property="og:description" content="这几天开发的过程中遇到路径相关的问题，具体的讲包括js和css加载不出来，调试之后发现根本没有调用到，应该是路径的问题；还有一些是前后端交互的一些路径问题，在此做个总结，希望有所帮助。  相对路径和绝对路径的概念 绝对路径：url地址以“/”开头 相对路径：url地址不以“/”开头  根目录有个项目noa1,项目下有login.html。如果想要访问login页面，则浏览器的地址是：http://">
+<meta property="og:updated_time" content="2017-05-16T15:02:38.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于多态的理解">
-<meta name="twitter:description" content="举个简单的例子好好体会体会…… 假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。 1234567public class Bird&amp;#123;    private Wing wing;//属性：翅膀    //方法：鸣叫    public void moo()&amp;#123;        System.out.println(&quot;鸟的叫声&quot;);    &amp;#125;&amp;#125; 鸟类封装了属性翅膀">
+<meta name="twitter:title" content="JavaWeb路径问题总结">
+<meta name="twitter:description" content="这几天开发的过程中遇到路径相关的问题，具体的讲包括js和css加载不出来，调试之后发现根本没有调用到，应该是路径的问题；还有一些是前后端交互的一些路径问题，在此做个总结，希望有所帮助。  相对路径和绝对路径的概念 绝对路径：url地址以“/”开头 相对路径：url地址不以“/”开头  根目录有个项目noa1,项目下有login.html。如果想要访问login页面，则浏览器的地址是：http://">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/16/关于多态的理解/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/17/JavaWeb路径问题总结/"/>
 
 
 
 
 
-  <title> 关于多态的理解 | Forever </title>
+  <title> JavaWeb路径问题总结 | Forever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,8 +259,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/16/关于多态的理解/">
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/17/JavaWeb路径问题总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aranonoa007">
@@ -281,7 +281,7 @@
             
             
               
-                关于多态的理解
+                JavaWeb路径问题总结
               
             
           </h1>
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-16T20:17:47+08:00">
-                2017-05-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T20:17:47+08:00">
+                2017-05-17
               </time>
             
 
@@ -332,20 +332,28 @@
       
 
       
-        <p>举个简单的例子<br>好好体会体会……</p>
-<p>假设有一个类，叫鸟类，拥有属性翅膀，拥有方法鸣叫。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> Wing wing;<span class="comment">//属性：翅膀</span></div><div class="line">    <span class="comment">//方法：鸣叫</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"鸟的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>鸟类封装了属性翅膀和鸣叫的方法。<br>另外两个类都继承并重写了moo方法，分别是鹦鹉和麻雀。</p>
-<p>鹦鹉类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parrot</span> <span class="keyword">extends</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"鹦鹉的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>麻雀类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sparrow</span> <span class="keyword">extends</span> <span class="title">Bird</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moo</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"麻雀的叫声"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这两个子类分别重写了鸟类的moo()方法<br>这个时候，有个女人想听鸟的叫声。<br>于是有个Women类，听鸟叫是Women的方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Women</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">()</span></span>&#123;</div><div class="line">        bird.moo();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>假设现在，这个女人想听麻雀的叫声，你就必须在listen()写：<br><code>Sparrow.moo();</code><br>如果这个女的想听鹦鹉的叫声，你也要在listen()写：<br><code>Parrot.moo();</code><br>这要实现起来非常麻烦，必须为每个鸟类单独写一个moo()方法放在listen()方法中。</p>
-<p>要是有多态就简单许多，这个女人不是想听鸟叫吗，直接把鸟扔给她，然后让鸟叫。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">(Bird bird)</span></span>&#123;</div><div class="line">    bird.moo();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>多态实现了动态的绑定</strong><br>无论今后Women想听什么鸟的叫声，只需要新增相应的鸟类，不需要修改Women类的方法。总的来说，多态让程序有了更好的拓展性。</p>
+        <p>这几天开发的过程中遇到路径相关的问题，具体的讲包括js和css加载不出来，调试之后发现根本没有调用到，应该是路径的问题；还有一些是前后端交互的一些路径问题，在此做个总结，希望有所帮助。</p>
+<hr>
+<h2 id="相对路径和绝对路径的概念"><a href="#相对路径和绝对路径的概念" class="headerlink" title="相对路径和绝对路径的概念"></a>相对路径和绝对路径的概念</h2><ul>
+<li>绝对路径：url地址以“/”开头</li>
+<li>相对路径：url地址不以“/”开头</li>
+</ul>
+<h2 id="根目录"><a href="#根目录" class="headerlink" title="根目录"></a>根目录</h2><p>有个项目noa1,项目下有login.html。如果想要访问login页面，则浏览器的地址是：<code>http://localhost:8080/noa1/login.html</code>。</p>
+<p>根目录常用有以下两种：</p>
+<ul>
+<li>web站点根目录：<code>http://localhost:8080/</code></li>
+<li>应用程序的根目录：<code>http://localhost:8080/noa1/</code></li>
+</ul>
+<h2 id="request-getRequestDispatcher和response-sendRedirect"><a href="#request-getRequestDispatcher和response-sendRedirect" class="headerlink" title="request.getRequestDispatcher和response.sendRedirect"></a>request.getRequestDispatcher和response.sendRedirect</h2><p><code>request.getRequestDispatcher(url).forward(request, response);</code>转发，又叫服务器跳转，转发时浏览器的地址讲不会变化，客户端发送请求给服务器，服务器返回一次相应。因为是服务器跳转，<strong>所以根目录是当前应用程序根目录</strong>。<br><code>response.sendRedirect</code>重定向，又叫浏览器跳转，客户端发送请求给服务器，服务器会相应一个地址给客户端，客户端根据这个地址再次发送请求，服务器做出相应。也就是说浏览器跳转是两个请求，两个相应。由于是浏览器跳转，<strong>所以根目录是web站点的根目录</strong>。</p>
+<p>假设noa1项目下有文件夹a、文件夹b，文件夹a下有a.html，文件夹b下有b.html。<br>从a.html到b.html两种方法：</p>
+<ul>
+<li>转发，由于是服务器跳转，根目录是当前项目。所以url不需要带项目名称。相对路径：<code>../b/b.html</code>，绝对路径：<code>/b/b.html</code>。从a.html转发到b.html时，浏览器地址不变，所以b.html的外部样式引用要按照a.html的路径来。</li>
+<li>重定向，由于是浏览器跳转，根目录是web站点。所以url需要带项目名称。相对路径：<code>../b/b.html</code>，转发和重定向的相对路径都是一样的，服务器会根据a.html的位置和相对地址找到b.html，在修改相应的地址信息之后发送url给浏览器，浏览器会进行第二次请求。绝对路径：<code>/noa1/b/b.html</code>，使用绝对路径时，服务器会根据web站点根目录和绝对路径直接拼接成url地址，发送给浏览器。</li>
+</ul>
+<h2 id="web-xml中的路径问题"><a href="#web-xml中的路径问题" class="headerlink" title="web.xml中的路径问题"></a>web.xml中的路径问题</h2><p>web.xml中一般是绝对路径<br>web.xml是描述项目部署的相关信息的，所以web.xml的根目录是当前应用程序的根目录</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>a1<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/a1<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>项目名称：noa1<br>这个servlet会拦截<code>http://localhost:8080/noa1/a1</code>的请求</p>
+<h2 id="href-’’和action-’’的url根目录"><a href="#href-’’和action-’’的url根目录" class="headerlink" title="href=’’和action=’’的url根目录"></a>href=’’和action=’’的url根目录</h2><p> <code>&lt;form action=&quot;/xxx&quot;&gt;&lt;/form&gt;</code>和<code>&lt;a href=&quot;/xxx&quot;&gt;&lt;/a&gt;</code>中的根目录都是web站点的根目录。</p>
 
       
     </div>
@@ -379,6 +387,8 @@
           
             <a href="/tags/2/" rel="tag"># 2</a>
           
+            <a href="/tags/3/" rel="tag"># 3</a>
+          
         </div>
       
 
@@ -390,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/16/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/05/16/关于多态的理解/" rel="next" title="关于多态的理解">
+                <i class="fa fa-chevron-left"></i> 关于多态的理解
               </a>
             
           </div>
@@ -399,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/17/JavaWeb路径问题总结/" rel="prev" title="JavaWeb路径问题总结">
-                JavaWeb路径问题总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -449,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/a.jpg"
@@ -503,6 +518,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相对路径和绝对路径的概念"><span class="nav-number">1.</span> <span class="nav-text">相对路径和绝对路径的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根目录"><span class="nav-number">2.</span> <span class="nav-text">根目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#request-getRequestDispatcher和response-sendRedirect"><span class="nav-number">3.</span> <span class="nav-text">request.getRequestDispatcher和response.sendRedirect</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-xml中的路径问题"><span class="nav-number">4.</span> <span class="nav-text">web.xml中的路径问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#href-’’和action-’’的url根目录"><span class="nav-number">5.</span> <span class="nav-text">href=’’和action=’’的url根目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
